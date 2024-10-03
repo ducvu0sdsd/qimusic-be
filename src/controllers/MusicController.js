@@ -5,7 +5,7 @@ class MusicController {
 
     find = async (req, res) => {
         const { ask } = req.body
-        const targetUrl = `http://ac.mp3.zing.vn/complete?type=artist,song,key,code&num=500&query=${encodeURIComponent(ask)}`;
+        const targetUrl = `http://ac.mp3.zing.vn/complete?type=artist,song,key,code&num=500&query=${ask}`;
 
         try {
             const response = await fetch(targetUrl);
