@@ -14,7 +14,7 @@ const port = 8080
 
 // const baseURL = 'https://www.qichat.online'
 const baseURL = 'http://127.0.0.1:3000'
-const baseURLMobile = 'http://127.0.0.1:8081'
+const baseURLMobile = 'https://qimusic.vercel.app'
 
 // config
 dotenv.config();

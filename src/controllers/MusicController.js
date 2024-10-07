@@ -6,7 +6,7 @@ class MusicController {
     find = async (req, res) => {
         const { ask } = req.body
         const targetUrl = `http://ac.mp3.zing.vn/complete?type=artist,song,key,code&num=500&query=${ask}`;
-
+        console.log(targetUrl)
         try {
             const response = await fetch(targetUrl);
             const data = await response.json();

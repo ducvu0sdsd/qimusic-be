@@ -10,7 +10,10 @@ class AuthController {
         const { email, password } = req.body
         authService.signIn(email, password)
             .then(user => responseWithNoTokens(req, res, user, 200))
-            .catch(error => responseWithNoTokens(req, res, error.message, 500))
+            .catch(error => {
+                console.log(error)
+                return responseWithNoTokens(req, res, error.message, 500)
+            })
     }
 
     signUpStep1 = (req, res) => {
